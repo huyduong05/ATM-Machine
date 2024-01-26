@@ -1,28 +1,28 @@
 package ATM;
 public class Account {
-    private long accountNumber;
-    private int pinNumber;
+    private String accountNumber;
+    private String pinNumber;
     private double balance;
     
-    public Account(long num, int pin, double bal) { 
+    public Account(String num, String pin, double bal) { 
         accountNumber = num;
         pinNumber = pin;
         balance = bal;
     }
     
-    public long getAccountNumber() {
+    public String getAccountNumber() {
         return accountNumber;
     }
     
-    public void setAccountNumber(long accountNumber) {
+    public void setAccountNumber(String accountNumber) {
         this.accountNumber = accountNumber;
     }
     
-    public int getPinNumber() {
+    public String getPinNumber() {
         return pinNumber;
     }
 
-    public void setPinNumber(int pinNumber) {
+    public void setPinNumber(String pinNumber) {
         this.pinNumber = pinNumber;
     }
     
