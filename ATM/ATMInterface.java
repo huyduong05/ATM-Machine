@@ -124,8 +124,8 @@ public class ATMInterface extends JFrame {
                     .addComponent(pinNumberLabel, GroupLayout.Alignment.TRAILING))
                 .addGap(18, 18, 18)
                 .addGroup(panelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                    .addComponent(accountNumber, GroupLayout.PREFERRED_SIZE, 90, GroupLayout.PREFERRED_SIZE)
-                    .addComponent(password, GroupLayout.PREFERRED_SIZE, 90, GroupLayout.PREFERRED_SIZE))
+                    .addComponent(accountNumber, GroupLayout.PREFERRED_SIZE, 100, GroupLayout.PREFERRED_SIZE)
+                    .addComponent(password, GroupLayout.PREFERRED_SIZE, 100, GroupLayout.PREFERRED_SIZE))
                 .addGap(129, 129, 129))
             .addGroup(panelLayout.createSequentialGroup()
                 .addGroup(panelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
@@ -171,22 +171,26 @@ public class ATMInterface extends JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
+                .addGap(22, 22, 22)
                 .addGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                     .addComponent(ATMLogo, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                     .addComponent(panel, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(50, Short.MAX_VALUE))
+                .addContainerGap(66, Short.MAX_VALUE))
         );
 
         GroupLayout layout = new GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
