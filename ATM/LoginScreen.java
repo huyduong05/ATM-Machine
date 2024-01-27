@@ -4,15 +4,27 @@ import javax.swing.*;
 import java.awt.*;
 
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+* Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+* Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+*/
 
 /**
  *
  * @author huyduong
  */
 public class LoginScreen extends JFrame {
+    private JLabel ATMLabel;
+    private JPanel ATMLogo;
+    private JTextField accountNumber;
+    private JLabel accountNumberLabel;
+    private JDesktopPane jDesktopPane1;
+    private JPanel jPanel1;
+    private java.awt.Button loginButton;
+    private JPasswordField password;
+    private JLabel pinNumberLabel;
+    private JPanel panel;
+    private JLabel welcomeText;
+    private JLabel incorrectLogin;
 
     private ATM atm = new ATM();
     /**
@@ -31,31 +43,31 @@ public class LoginScreen extends JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
 
-        jDesktopPane1 = new JDesktopPane();
-        jPanel1 = new JPanel();
-        ATMLogo = new JPanel();
-        ATMLabel = new JLabel();
-        panel = new JPanel();
-        password = new JPasswordField();
-        welcomeText = new JLabel();
-        loginButton = new Button();
-        accountNumber = new JTextField();
-        accountNumberLabel = new JLabel();
-        pinNumberLabel = new JLabel();
-        incorrectLogin = new JLabel();
+        jDesktopPane1 = new javax.swing.JDesktopPane();
+        jPanel1 = new javax.swing.JPanel();
+        ATMLogo = new javax.swing.JPanel();
+        ATMLabel = new javax.swing.JLabel();
+        panel = new javax.swing.JPanel();
+        password = new javax.swing.JPasswordField();
+        welcomeText = new javax.swing.JLabel();
+        loginButton = new java.awt.Button();
+        accountNumber = new javax.swing.JTextField();
+        accountNumberLabel = new javax.swing.JLabel();
+        pinNumberLabel = new javax.swing.JLabel();
+        incorrectLogin = new javax.swing.JLabel();
 
-        GroupLayout jDesktopPane1Layout = new GroupLayout(jDesktopPane1);
+        javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
         jDesktopPane1.setLayout(jDesktopPane1Layout);
         jDesktopPane1Layout.setHorizontalGroup(
-            jDesktopPane1Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 100, Short.MAX_VALUE)
         );
         jDesktopPane1Layout.setVerticalGroup(
-            jDesktopPane1Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 100, Short.MAX_VALUE)
         );
 
-        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(153, 153, 153));
         setResizable(false);
 
@@ -67,18 +79,18 @@ public class LoginScreen extends JFrame {
         ATMLabel.setForeground(new java.awt.Color(0, 102, 51));
         ATMLabel.setText("ATM");
 
-        GroupLayout ATMLogoLayout = new GroupLayout(ATMLogo);
+        javax.swing.GroupLayout ATMLogoLayout = new javax.swing.GroupLayout(ATMLogo);
         ATMLogo.setLayout(ATMLogoLayout);
         ATMLogoLayout.setHorizontalGroup(
-            ATMLogoLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            ATMLogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ATMLogoLayout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addComponent(ATMLabel)
                 .addContainerGap(20, Short.MAX_VALUE))
         );
         ATMLogoLayout.setVerticalGroup(
-            ATMLogoLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addGroup(GroupLayout.Alignment.TRAILING, ATMLogoLayout.createSequentialGroup()
+            ATMLogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ATMLogoLayout.createSequentialGroup()
                 .addContainerGap(17, Short.MAX_VALUE)
                 .addComponent(ATMLabel)
                 .addContainerGap())
@@ -86,11 +98,14 @@ public class LoginScreen extends JFrame {
 
         panel.setBackground(new java.awt.Color(255, 255, 255));
 
+        password.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
 
-        welcomeText.setFont(new java.awt.Font("Monaco", 0, 24)); // NOI18N
+        welcomeText.setFont(new java.awt.Font("Monospaced", 1, 30)); // NOI18N
+        welcomeText.setForeground(new java.awt.Color(0, 51, 204));
         welcomeText.setText("WELCOME TO THE BANK");
 
         loginButton.setBackground(new java.awt.Color(51, 102, 255));
+        loginButton.setFont(new java.awt.Font(".AppleSystemUIFont", 1, 18)); // NOI18N
         loginButton.setForeground(new java.awt.Color(255, 255, 255));
         loginButton.setLabel("Login");
         loginButton.addActionListener(new java.awt.event.ActionListener() {
@@ -99,102 +114,99 @@ public class LoginScreen extends JFrame {
             }
         });
 
-        accountNumberLabel.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
+        accountNumber.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+
+        accountNumberLabel.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         accountNumberLabel.setText("Account Number:");
 
-        pinNumberLabel.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
+        pinNumberLabel.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         pinNumberLabel.setText("Pin Number:");
-        
+
         incorrectLogin.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
         incorrectLogin.setForeground(new java.awt.Color(102, 102, 102));
         incorrectLogin.setText("Invalid Login Credentials");
         incorrectLogin.setVisible(false);
 
-        GroupLayout panelLayout = new GroupLayout(panel);
+        javax.swing.GroupLayout panelLayout = new javax.swing.GroupLayout(panel);
         panel.setLayout(panelLayout);
         panelLayout.setHorizontalGroup(
-            panelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addGroup(GroupLayout.Alignment.TRAILING, panelLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(panelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                    .addGroup(panelLayout.createSequentialGroup()
-                        .addGroup(panelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                            .addComponent(accountNumberLabel, GroupLayout.Alignment.TRAILING)
-                            .addComponent(pinNumberLabel, GroupLayout.Alignment.TRAILING))
-                        .addGap(18, 18, 18)
-                        .addGroup(panelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                            .addComponent(accountNumber, GroupLayout.PREFERRED_SIZE, 90, GroupLayout.PREFERRED_SIZE)
-                            .addComponent(password, GroupLayout.PREFERRED_SIZE, 90, GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(panelLayout.createSequentialGroup()
-                        .addGap(33, 33, 33)
-                        .addComponent(incorrectLogin)))
-                .addGap(129, 129, 129))
+            panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelLayout.createSequentialGroup()
+                .addContainerGap(90, Short.MAX_VALUE)
+                .addComponent(welcomeText)
+                .addGap(86, 86, 86))
             .addGroup(panelLayout.createSequentialGroup()
-                .addGroup(panelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelLayout.createSequentialGroup()
-                        .addGap(77, 77, 77)
-                        .addComponent(welcomeText))
+                        .addGap(98, 98, 98)
+                        .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(accountNumberLabel)
+                            .addComponent(pinNumberLabel))
+                        .addGap(18, 18, 18)
+                        .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(accountNumber, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                            .addComponent(password)))
                     .addGroup(panelLayout.createSequentialGroup()
-                        .addGap(179, 179, 179)
-                        .addComponent(loginButton, GroupLayout.PREFERRED_SIZE, 73, GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(104, Short.MAX_VALUE))
+                        .addGap(172, 172, 172)
+                        .addComponent(incorrectLogin))
+                    .addGroup(panelLayout.createSequentialGroup()
+                        .addGap(206, 206, 206)
+                        .addComponent(loginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelLayout.setVerticalGroup(
-            panelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addGroup(GroupLayout.Alignment.TRAILING, panelLayout.createSequentialGroup()
-                .addGap(43, 43, 43)
+            panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelLayout.createSequentialGroup()
+                .addGap(59, 59, 59)
                 .addComponent(welcomeText)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
-                .addGroup(panelLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                .addGap(45, 45, 45)
+                .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(accountNumberLabel)
-                    .addComponent(accountNumber, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(panelLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                    .addComponent(accountNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(pinNumberLabel)
-                    .addComponent(password, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
+                    .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(27, 27, 27)
                 .addComponent(incorrectLogin)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(loginButton, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                .addGap(49, 49, 49))
+                .addGap(20, 20, 20)
+                .addComponent(loginButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(48, Short.MAX_VALUE))
         );
 
-        welcomeText.getAccessibleContext().setAccessibleParent(pinNumberLabel);
-
-        jPanel1.setSize(651, 394);
-        GroupLayout jPanel1Layout = new GroupLayout(jPanel1);
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addComponent(panel, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(ATMLogo, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                .addComponent(ATMLogo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(23, 23, 23))
         );
         jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(22, 22, 22)
-                .addGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                    .addComponent(ATMLogo, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                    .addComponent(panel, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(66, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ATMLogo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(65, Short.MAX_VALUE))
         );
 
-        GroupLayout layout = new GroupLayout(getContentPane());
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 16, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
-            layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -254,18 +266,4 @@ public class LoginScreen extends JFrame {
         });
     }
 
-    // Variables declaration - do not modify                     
-    private JLabel ATMLabel;
-    private JPanel ATMLogo;
-    private JTextField accountNumber;
-    private JLabel accountNumberLabel;
-    private JDesktopPane jDesktopPane1;
-    private JPanel jPanel1;
-    private java.awt.Button loginButton;
-    private JPasswordField password;
-    private JLabel pinNumberLabel;
-    private JPanel panel;
-    private JLabel welcomeText;
-    private JLabel incorrectLogin;
-    // End of variables declaration                   
 }
