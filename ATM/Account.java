@@ -49,6 +49,11 @@ public class Account {
             System.out.println("Invalid deposit amount");
         }
     }
+    @Override
+    public String toString() {
+        // TODO Auto-generated method stub
+        return accountNumber;
+    }
 
     
 }

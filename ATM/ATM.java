@@ -18,6 +18,7 @@ public class ATM {
                 double bal = scan.nextDouble();
                 addAccount(accountNum, pin, bal);
             }
+            scan.close();
         } catch (IOException e) {
             // TODO: handle exception
             e.printStackTrace();
@@ -26,6 +27,7 @@ public class ATM {
 
     public void addAccount(String accountNumber, String pinNumber, double balance) { 
         accounts.putIfAbsent(accountNumber, new Account(pinNumber, pinNumber, balance));
+        // System.out.println(accounts.size());
     }
 
     public void deleteAccount(String accountNumber) { 
@@ -35,13 +37,18 @@ public class ATM {
     public boolean validAccount(String accountNumber,String pinNumber) { 
         if (accounts.containsKey(accountNumber)) { 
             Account a = accounts.get(accountNumber);
-            if (a.getPinNumber() == pinNumber) { 
+            if (a.getPinNumber().equals(pinNumber)) { 
                 return true;
             }
         }
         return false;
     }
 
+    public static void main(String[] args) {
+        ATM a = new ATM();
+
+        
+    }
 
 
 }

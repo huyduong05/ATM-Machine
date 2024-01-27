@@ -1,6 +1,7 @@
 package ATM;
 
 import javax.swing.*;
+import java.awt.*;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -11,13 +12,13 @@ import javax.swing.*;
  *
  * @author huyduong
  */
-public class ATMInterface extends JFrame {
+public class LoginScreen extends JFrame {
 
     private ATM atm = new ATM();
     /**
      * Creates new form ATMInterface
      */
-    public ATMInterface() {
+    public LoginScreen() {
         initComponents();
     }
 
@@ -37,10 +38,11 @@ public class ATMInterface extends JFrame {
         panel = new JPanel();
         password = new JPasswordField();
         welcomeText = new JLabel();
-        loginButton = new java.awt.Button();
+        loginButton = new Button();
         accountNumber = new JTextField();
         accountNumberLabel = new JLabel();
         pinNumberLabel = new JLabel();
+        incorrectLogin = new JLabel();
 
         GroupLayout jDesktopPane1Layout = new GroupLayout(jDesktopPane1);
         jDesktopPane1.setLayout(jDesktopPane1Layout);
@@ -55,6 +57,7 @@ public class ATMInterface extends JFrame {
 
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(153, 153, 153));
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
 
@@ -83,11 +86,6 @@ public class ATMInterface extends JFrame {
 
         panel.setBackground(new java.awt.Color(255, 255, 255));
 
-        password.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                passwordActionPerformed(evt);
-            }
-        });
 
         welcomeText.setFont(new java.awt.Font("Monaco", 0, 24)); // NOI18N
         welcomeText.setText("WELCOME TO THE BANK");
@@ -101,17 +99,16 @@ public class ATMInterface extends JFrame {
             }
         });
 
-        accountNumber.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                accountNumberActionPerformed(evt);
-            }
-        });
-
         accountNumberLabel.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
         accountNumberLabel.setText("Account Number:");
 
         pinNumberLabel.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
         pinNumberLabel.setText("Pin Number:");
+        
+        incorrectLogin.setFont(new java.awt.Font("SansSerif", 0, 13)); // NOI18N
+        incorrectLogin.setForeground(new java.awt.Color(102, 102, 102));
+        incorrectLogin.setText("Invalid Login Credentials");
+        incorrectLogin.setVisible(false);
 
         GroupLayout panelLayout = new GroupLayout(panel);
         panel.setLayout(panelLayout);
@@ -120,12 +117,17 @@ public class ATMInterface extends JFrame {
             .addGroup(GroupLayout.Alignment.TRAILING, panelLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(panelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                    .addComponent(accountNumberLabel, GroupLayout.Alignment.TRAILING)
-                    .addComponent(pinNumberLabel, GroupLayout.Alignment.TRAILING))
-                .addGap(18, 18, 18)
-                .addGroup(panelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                    .addComponent(accountNumber, GroupLayout.PREFERRED_SIZE, 100, GroupLayout.PREFERRED_SIZE)
-                    .addComponent(password, GroupLayout.PREFERRED_SIZE, 100, GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelLayout.createSequentialGroup()
+                        .addGroup(panelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                            .addComponent(accountNumberLabel, GroupLayout.Alignment.TRAILING)
+                            .addComponent(pinNumberLabel, GroupLayout.Alignment.TRAILING))
+                        .addGap(18, 18, 18)
+                        .addGroup(panelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                            .addComponent(accountNumber, GroupLayout.PREFERRED_SIZE, 90, GroupLayout.PREFERRED_SIZE)
+                            .addComponent(password, GroupLayout.PREFERRED_SIZE, 90, GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(panelLayout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addComponent(incorrectLogin)))
                 .addGap(129, 129, 129))
             .addGroup(panelLayout.createSequentialGroup()
                 .addGroup(panelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
@@ -133,16 +135,16 @@ public class ATMInterface extends JFrame {
                         .addGap(77, 77, 77)
                         .addComponent(welcomeText))
                     .addGroup(panelLayout.createSequentialGroup()
-                        .addGap(166, 166, 166)
+                        .addGap(179, 179, 179)
                         .addComponent(loginButton, GroupLayout.PREFERRED_SIZE, 73, GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(88, Short.MAX_VALUE))
+                .addContainerGap(104, Short.MAX_VALUE))
         );
         panelLayout.setVerticalGroup(
             panelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
             .addGroup(GroupLayout.Alignment.TRAILING, panelLayout.createSequentialGroup()
                 .addGap(43, 43, 43)
                 .addComponent(welcomeText)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
                 .addGroup(panelLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                     .addComponent(accountNumberLabel)
                     .addComponent(accountNumber, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
@@ -150,13 +152,16 @@ public class ATMInterface extends JFrame {
                 .addGroup(panelLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                     .addComponent(pinNumberLabel)
                     .addComponent(password, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-                .addGap(19, 19, 19)
+                .addGap(10, 10, 10)
+                .addComponent(incorrectLogin)
+                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(loginButton, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40))
+                .addGap(49, 49, 49))
         );
 
         welcomeText.getAccessibleContext().setAccessibleParent(pinNumberLabel);
 
+        jPanel1.setSize(651, 394);
         GroupLayout jPanel1Layout = new GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -199,24 +204,20 @@ public class ATMInterface extends JFrame {
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {                                            
         // TODO add your handling code here:
         String accountNum = accountNumber.getText();
-        String pin = password.getSelectedText();
+        String pin = String.valueOf(password.getPassword());
+
         if (atm.validAccount(accountNum, pin)) { 
-            accountNumber.setVisible(false);
-            accountNumberLabel.setVisible(false);
-            pinNumberLabel.setVisible(false);
-            password.setVisible(false);
-            loginButton.setVisible(false);
-            welcomeText.setVisible(false);
+            hideLogin();
+            incorrectLogin.setVisible(false);
+        } else { 
+            incorrectLogin.setVisible(true);
         }
     }                                           
 
-    private void accountNumberActionPerformed(java.awt.event.ActionEvent evt) {                                              
-        // TODO add your handling code here:
-    }                                             
-
-    private void passwordActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        // TODO add your handling code here:
-    }                                        
+    private void hideLogin() { 
+        dispose();
+        System.exit(0);
+    }                                     
 
     /**
      * @param args the command line arguments
@@ -235,20 +236,20 @@ public class ATMInterface extends JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ATMInterface.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ATMInterface.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ATMInterface.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ATMInterface.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
+        EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ATMInterface().setVisible(true);
+                new LoginScreen().setVisible(true);
             }
         });
     }
@@ -265,5 +266,6 @@ public class ATMInterface extends JFrame {
     private JLabel pinNumberLabel;
     private JPanel panel;
     private JLabel welcomeText;
+    private JLabel incorrectLogin;
     // End of variables declaration                   
 }
