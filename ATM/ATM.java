@@ -4,6 +4,10 @@ import java.util.Scanner;
 import java.io.File;
 import java.io.IOException;
 
+/**
+ *
+ * @author huyduong
+ */
 public class ATM { 
     private HashMap<String, Account> accounts = new HashMap<String, Account>();
 

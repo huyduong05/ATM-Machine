@@ -1,4 +1,9 @@
 package ATM;
+
+/**
+ *
+ * @author huyduong
+ */
 public class Account {
     private String accountNumber;
     private String pinNumber;

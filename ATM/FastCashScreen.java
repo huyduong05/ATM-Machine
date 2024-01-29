@@ -1,35 +1,32 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package ATM;
+import javax.swing.*;
 
 /**
  *
  * @author huyduong
  */
-public class FastCashScreen extends javax.swing.JFrame {
+public class FastCashScreen extends JFrame {
     
     private Account bankAccount;
     
-    private javax.swing.JPanel $$$1;
-    private javax.swing.JLabel $label;
-    private javax.swing.JLabel ATMLabel3;
-    private javax.swing.JPanel ATMLogo3;
-    private javax.swing.JLabel accountText;
-    private javax.swing.JButton eightyButton;
-    private javax.swing.JLabel fastcashText;
-    private javax.swing.JButton fortyButton;
+    private JPanel $$$1;
+    private JLabel $label;
+    private JLabel ATMLabel3;
+    private JPanel ATMLogo3;
+    private JLabel accountText;
+    private JButton eightyButton;
+    private JLabel fastcashText;
+    private JButton fortyButton;
     private java.awt.Button homeButton;
-    private javax.swing.JButton hundredButton;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel message;
-    private javax.swing.JPanel screen7;
+    private JButton hundredButton;
+    private JPanel jPanel1;
+    private JLabel message;
+    private JPanel screen7;
     private java.awt.Button signoutButton;
-    private javax.swing.JButton sixtyButton;
-    private javax.swing.JButton twentyButton;
-    private javax.swing.JButton twohundredButton;
-    private javax.swing.JLabel welcomeText;
+    private JButton sixtyButton;
+    private JButton twentyButton;
+    private JButton twohundredButton;
+    private JLabel welcomeText;
 
     /**
      * Creates new form FastCashScreen
@@ -48,26 +45,26 @@ public class FastCashScreen extends javax.swing.JFrame {
                      
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        ATMLogo3 = new javax.swing.JPanel();
-        ATMLabel3 = new javax.swing.JLabel();
-        screen7 = new javax.swing.JPanel();
-        welcomeText = new javax.swing.JLabel();
-        accountText = new javax.swing.JLabel();
+        jPanel1 = new JPanel();
+        ATMLogo3 = new JPanel();
+        ATMLabel3 = new JLabel();
+        screen7 = new JPanel();
+        welcomeText = new JLabel();
+        accountText = new JLabel();
         signoutButton = new java.awt.Button();
         homeButton = new java.awt.Button();
-        fastcashText = new javax.swing.JLabel();
-        fortyButton = new javax.swing.JButton();
-        hundredButton = new javax.swing.JButton();
-        sixtyButton = new javax.swing.JButton();
-        twentyButton = new javax.swing.JButton();
-        twohundredButton = new javax.swing.JButton();
-        eightyButton = new javax.swing.JButton();
-        message = new javax.swing.JLabel();
-        $$$1 = new javax.swing.JPanel();
-        $label = new javax.swing.JLabel();
+        fastcashText = new JLabel();
+        fortyButton = new JButton();
+        hundredButton = new JButton();
+        sixtyButton = new JButton();
+        twentyButton = new JButton();
+        twohundredButton = new JButton();
+        eightyButton = new JButton();
+        message = new JLabel();
+        $$$1 = new JPanel();
+        $label = new JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
 
@@ -77,18 +74,18 @@ public class FastCashScreen extends javax.swing.JFrame {
         ATMLabel3.setForeground(new java.awt.Color(0, 102, 51));
         ATMLabel3.setText("ATM");
 
-        javax.swing.GroupLayout ATMLogo3Layout = new javax.swing.GroupLayout(ATMLogo3);
+        GroupLayout ATMLogo3Layout = new GroupLayout(ATMLogo3);
         ATMLogo3.setLayout(ATMLogo3Layout);
         ATMLogo3Layout.setHorizontalGroup(
-            ATMLogo3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            ATMLogo3Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
             .addGroup(ATMLogo3Layout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addComponent(ATMLabel3)
                 .addContainerGap(20, Short.MAX_VALUE))
         );
         ATMLogo3Layout.setVerticalGroup(
-            ATMLogo3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ATMLogo3Layout.createSequentialGroup()
+            ATMLogo3Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            .addGroup(GroupLayout.Alignment.TRAILING, ATMLogo3Layout.createSequentialGroup()
                 .addContainerGap(17, Short.MAX_VALUE)
                 .addComponent(ATMLabel3)
                 .addContainerGap())
@@ -193,12 +190,12 @@ public class FastCashScreen extends javax.swing.JFrame {
         message.setForeground(new java.awt.Color(102, 102, 102));
         message.setText("Withdrawing cash...");
 
-        javax.swing.GroupLayout screen7Layout = new javax.swing.GroupLayout(screen7);
+        GroupLayout screen7Layout = new GroupLayout(screen7);
         screen7.setLayout(screen7Layout);
         screen7Layout.setHorizontalGroup(
-            screen7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            screen7Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
             .addGroup(screen7Layout.createSequentialGroup()
-                .addGroup(screen7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(screen7Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                     .addGroup(screen7Layout.createSequentialGroup()
                         .addGap(186, 186, 186)
                         .addComponent(welcomeText))
@@ -210,50 +207,50 @@ public class FastCashScreen extends javax.swing.JFrame {
                         .addComponent(fastcashText))
                     .addGroup(screen7Layout.createSequentialGroup()
                         .addGap(105, 105, 105)
-                        .addGroup(screen7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(homeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(hundredButton, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(sixtyButton, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(twentyButton, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(screen7Layout.createParallelGroup(GroupLayout.Alignment.TRAILING)
+                            .addComponent(homeButton, GroupLayout.PREFERRED_SIZE, 146, GroupLayout.PREFERRED_SIZE)
+                            .addComponent(hundredButton, GroupLayout.PREFERRED_SIZE, 110, GroupLayout.PREFERRED_SIZE)
+                            .addComponent(sixtyButton, GroupLayout.PREFERRED_SIZE, 110, GroupLayout.PREFERRED_SIZE)
+                            .addComponent(twentyButton, GroupLayout.PREFERRED_SIZE, 110, GroupLayout.PREFERRED_SIZE))
                         .addGap(28, 28, 28)
-                        .addGroup(screen7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(fortyButton, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(signoutButton, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(twohundredButton, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(eightyButton, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGroup(screen7Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                            .addComponent(fortyButton, GroupLayout.PREFERRED_SIZE, 110, GroupLayout.PREFERRED_SIZE)
+                            .addComponent(signoutButton, GroupLayout.PREFERRED_SIZE, 146, GroupLayout.PREFERRED_SIZE)
+                            .addComponent(twohundredButton, GroupLayout.PREFERRED_SIZE, 110, GroupLayout.PREFERRED_SIZE)
+                            .addComponent(eightyButton, GroupLayout.PREFERRED_SIZE, 110, GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(96, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, screen7Layout.createSequentialGroup()
+            .addGroup(GroupLayout.Alignment.TRAILING, screen7Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(message)
                 .addGap(197, 197, 197))
         );
         screen7Layout.setVerticalGroup(
-            screen7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            screen7Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
             .addGroup(screen7Layout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addComponent(welcomeText)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(accountText)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(fastcashText)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(screen7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(fortyButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(twentyButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(screen7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(sixtyButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(eightyButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(screen7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(hundredButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(twohundredButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(screen7Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                    .addComponent(fortyButton, GroupLayout.PREFERRED_SIZE, 38, GroupLayout.PREFERRED_SIZE)
+                    .addComponent(twentyButton, GroupLayout.PREFERRED_SIZE, 38, GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(screen7Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                    .addComponent(sixtyButton, GroupLayout.PREFERRED_SIZE, 38, GroupLayout.PREFERRED_SIZE)
+                    .addComponent(eightyButton, GroupLayout.PREFERRED_SIZE, 38, GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(screen7Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                    .addComponent(hundredButton, GroupLayout.PREFERRED_SIZE, 38, GroupLayout.PREFERRED_SIZE)
+                    .addComponent(twohundredButton, GroupLayout.PREFERRED_SIZE, 38, GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(message)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(screen7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(homeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(signoutButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(screen7Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                    .addComponent(homeButton, GroupLayout.PREFERRED_SIZE, 40, GroupLayout.PREFERRED_SIZE)
+                    .addComponent(signoutButton, GroupLayout.PREFERRED_SIZE, 40, GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(24, Short.MAX_VALUE))
         );
 
@@ -263,61 +260,61 @@ public class FastCashScreen extends javax.swing.JFrame {
         $label.setForeground(new java.awt.Color(255, 255, 255));
         $label.setText("$$$");
 
-        javax.swing.GroupLayout $$$1Layout = new javax.swing.GroupLayout($$$1);
+        GroupLayout $$$1Layout = new GroupLayout($$$1);
         $$$1.setLayout($$$1Layout);
         $$$1Layout.setHorizontalGroup(
-            $$$1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            $$$1Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
             .addGroup($$$1Layout.createSequentialGroup()
                 .addGap(85, 85, 85)
                 .addComponent($label)
                 .addContainerGap(91, Short.MAX_VALUE))
         );
         $$$1Layout.setVerticalGroup(
-            $$$1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            $$$1Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
             .addComponent($label)
         );
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        GroupLayout jPanel1Layout = new GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            jPanel1Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(25, 25, 25)
-                        .addComponent(screen7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(screen7, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(ATMLogo3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(ATMLogo3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(188, 188, 188)
-                        .addComponent($$$1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent($$$1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(20, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            jPanel1Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(22, 22, 22)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(ATMLogo3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(screen7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                    .addComponent(ATMLogo3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                    .addComponent(screen7, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent($$$1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent($$$1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(19, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        GroupLayout layout = new GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
-    }// </editor-fold>                        
+    }
 
     private void signoutButtonActionPerformed(java.awt.event.ActionEvent evt) {                                              
         // TODO add your handling code here:
@@ -360,14 +357,13 @@ public class FastCashScreen extends javax.swing.JFrame {
      */
     public void launchFastCash() {
         /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
         try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+            for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
             }
@@ -377,10 +373,9 @@ public class FastCashScreen extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(FastCashScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
             java.util.logging.Logger.getLogger(FastCashScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(FastCashScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
