@@ -10,10 +10,13 @@ package ATM;
  */
 public class BalanceScreen extends javax.swing.JFrame {
 
+    private Account bankAccount;
     /**
      * Creates new form BalanceScreen
      */
-    public BalanceScreen() {
+    public BalanceScreen(Account acc) {
+        super();
+        bankAccount = acc;
         initComponents();
     }
 
@@ -29,14 +32,14 @@ public class BalanceScreen extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         ATMLogo1 = new javax.swing.JPanel();
         ATMLabel1 = new javax.swing.JLabel();
-        screen7 = new javax.swing.JPanel();
+        panel = new javax.swing.JPanel();
         welcomeText9 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        accountNumber = new javax.swing.JLabel();
         balancePanel = new javax.swing.JPanel();
         yourBalanceLabel = new javax.swing.JLabel();
-        balanceLabel = new javax.swing.JLabel();
+        balanceAmount = new javax.swing.JLabel();
         signoutButton = new java.awt.Button();
-        returnButton = new java.awt.Button();
+        homeButton = new java.awt.Button();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -66,17 +69,17 @@ public class BalanceScreen extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        screen7.setBackground(new java.awt.Color(255, 255, 255));
+        panel.setBackground(new java.awt.Color(255, 255, 255));
 
         welcomeText9.setFont(new java.awt.Font("Monospaced", 1, 30)); // NOI18N
         welcomeText9.setForeground(new java.awt.Color(0, 51, 204));
         welcomeText9.setText("THE BANK");
 
-        jLabel2.setFont(new java.awt.Font("SansSerif", 2, 13)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel2.setText("Account Number: xxxxxxxxxxxx");
+        accountNumber.setFont(new java.awt.Font("SansSerif", 2, 13)); // NOI18N
+        accountNumber.setForeground(new java.awt.Color(102, 102, 102));
+        accountNumber.setText("Account Number: xxxxxxxxxxxx");
 
-        balancePanel.setBackground(new java.awt.Color(51, 0, 255));
+        balancePanel.setBackground(new java.awt.Color(0, 153, 102));
         balancePanel.setBorder(new javax.swing.border.MatteBorder(null));
         balancePanel.setForeground(new java.awt.Color(255, 255, 255));
 
@@ -84,9 +87,9 @@ public class BalanceScreen extends javax.swing.JFrame {
         yourBalanceLabel.setForeground(new java.awt.Color(255, 255, 255));
         yourBalanceLabel.setText("Your balance is:");
 
-        balanceLabel.setFont(new java.awt.Font(".AppleSystemUIFont", 1, 24)); // NOI18N
-        balanceLabel.setForeground(new java.awt.Color(255, 255, 255));
-        balanceLabel.setText("$xxx,xxx,xxx,xxx,xxx.xx");
+        balanceAmount.setFont(new java.awt.Font(".AppleSystemUIFont", 1, 24)); // NOI18N
+        balanceAmount.setForeground(new java.awt.Color(255, 255, 255));
+        balanceAmount.setText("$xxx,xxx,xxx,xxx,xxx.xx");
 
         javax.swing.GroupLayout balancePanelLayout = new javax.swing.GroupLayout(balancePanel);
         balancePanel.setLayout(balancePanelLayout);
@@ -99,7 +102,7 @@ public class BalanceScreen extends javax.swing.JFrame {
                         .addComponent(yourBalanceLabel))
                     .addGroup(balancePanelLayout.createSequentialGroup()
                         .addGap(21, 21, 21)
-                        .addComponent(balanceLabel)))
+                        .addComponent(balanceAmount)))
                 .addContainerGap(21, Short.MAX_VALUE))
         );
         balancePanelLayout.setVerticalGroup(
@@ -108,7 +111,7 @@ public class BalanceScreen extends javax.swing.JFrame {
                 .addGap(29, 29, 29)
                 .addComponent(yourBalanceLabel)
                 .addGap(18, 18, 18)
-                .addComponent(balanceLabel)
+                .addComponent(balanceAmount)
                 .addContainerGap(56, Short.MAX_VALUE))
         );
 
@@ -122,56 +125,56 @@ public class BalanceScreen extends javax.swing.JFrame {
             }
         });
 
-        returnButton.setBackground(new java.awt.Color(123, 166, 253));
-        returnButton.setFont(new java.awt.Font(".AppleSystemUIFont", 1, 18)); // NOI18N
-        returnButton.setForeground(new java.awt.Color(255, 255, 255));
-        returnButton.setLabel("Return");
-        returnButton.addActionListener(new java.awt.event.ActionListener() {
+        homeButton.setBackground(new java.awt.Color(123, 166, 253));
+        homeButton.setFont(new java.awt.Font(".AppleSystemUIFont", 1, 18)); // NOI18N
+        homeButton.setForeground(new java.awt.Color(255, 255, 255));
+        homeButton.setLabel("Home");
+        homeButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                returnButtonActionPerformed(evt);
+                homeButtonActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout screen7Layout = new javax.swing.GroupLayout(screen7);
-        screen7.setLayout(screen7Layout);
-        screen7Layout.setHorizontalGroup(
-            screen7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(screen7Layout.createSequentialGroup()
-                .addGroup(screen7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(screen7Layout.createSequentialGroup()
+        javax.swing.GroupLayout panelLayout = new javax.swing.GroupLayout(panel);
+        panel.setLayout(panelLayout);
+        panelLayout.setHorizontalGroup(
+            panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelLayout.createSequentialGroup()
+                .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelLayout.createSequentialGroup()
                         .addGap(186, 186, 186)
                         .addComponent(welcomeText9))
-                    .addGroup(screen7Layout.createSequentialGroup()
+                    .addGroup(panelLayout.createSequentialGroup()
                         .addGap(155, 155, 155)
-                        .addComponent(jLabel2))
-                    .addGroup(screen7Layout.createSequentialGroup()
+                        .addComponent(accountNumber))
+                    .addGroup(panelLayout.createSequentialGroup()
                         .addGap(80, 80, 80)
-                        .addGroup(screen7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(screen7Layout.createSequentialGroup()
+                        .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelLayout.createSequentialGroup()
                                 .addGap(25, 25, 25)
-                                .addComponent(returnButton, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(homeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(28, 28, 28)
                                 .addComponent(signoutButton, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(balancePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(80, Short.MAX_VALUE))
         );
-        screen7Layout.setVerticalGroup(
-            screen7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(screen7Layout.createSequentialGroup()
+        panelLayout.setVerticalGroup(
+            panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelLayout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addComponent(welcomeText9)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2)
+                .addComponent(accountNumber)
                 .addGap(23, 23, 23)
                 .addComponent(balancePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(screen7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(returnButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(homeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(signoutButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(32, Short.MAX_VALUE))
         );
 
-        returnButton.getAccessibleContext().setAccessibleName("SignOut");
+        homeButton.getAccessibleContext().setAccessibleName("SignOut");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -179,7 +182,7 @@ public class BalanceScreen extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addComponent(screen7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(ATMLogo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(20, Short.MAX_VALUE))
@@ -190,7 +193,7 @@ public class BalanceScreen extends javax.swing.JFrame {
                 .addGap(22, 22, 22)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(ATMLogo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(screen7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(60, Short.MAX_VALUE))
         );
 
@@ -215,19 +218,19 @@ public class BalanceScreen extends javax.swing.JFrame {
     private void signoutButtonActionPerformed(java.awt.event.ActionEvent evt) {                                              
         // TODO add your handling code here:
         dispose();
-        new LoginScreen().setVisible(true);;
+        new LoginScreen().launchLogin();;
     }                                             
 
-    private void returnButtonActionPerformed(java.awt.event.ActionEvent evt) {                                             
+    private void homeButtonActionPerformed(java.awt.event.ActionEvent evt) {                                           
         // TODO add your handling code here:
         dispose();
-        new MainScreen().setVisible(true);
-    }                                            
+        new HomeScreen(bankAccount).launchHome();
+    }             
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+    public void launchBalance() {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -254,7 +257,7 @@ public class BalanceScreen extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new BalanceScreen().setVisible(true);
+                new BalanceScreen(bankAccount).setVisible(true);
             }
         });
     }
@@ -262,12 +265,12 @@ public class BalanceScreen extends javax.swing.JFrame {
     // Variables declaration - do not modify                     
     private javax.swing.JLabel ATMLabel1;
     private javax.swing.JPanel ATMLogo1;
-    private javax.swing.JLabel balanceLabel;
+    private javax.swing.JLabel accountNumber;
+    private javax.swing.JLabel balanceAmount;
     private javax.swing.JPanel balancePanel;
-    private javax.swing.JLabel jLabel2;
+    private java.awt.Button homeButton;
     private javax.swing.JPanel jPanel1;
-    private java.awt.Button returnButton;
-    private javax.swing.JPanel screen7;
+    private javax.swing.JPanel panel;
     private java.awt.Button signoutButton;
     private javax.swing.JLabel welcomeText9;
     private javax.swing.JLabel yourBalanceLabel;

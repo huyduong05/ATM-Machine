@@ -20,7 +20,6 @@ public class ATM {
             }
             scan.close();
         } catch (IOException e) {
-            // TODO: handle exception
             e.printStackTrace();
         } 
     }
@@ -44,11 +43,10 @@ public class ATM {
         return false;
     }
 
-    public static void main(String[] args) {
-        ATM a = new ATM();
-
-        
+    public Account getAccount(String s) { 
+        return accounts.get(s);
     }
+
 
 
 }
