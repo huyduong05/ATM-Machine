@@ -12,7 +12,7 @@ public class Account {
     public Account(String num, String pin, double bal) { 
         accountNumber = num;
         pinNumber = pin;
-        balance = bal;
+        balance = bal * 1.00;
     }
     
     public String getAccountNumber() {
@@ -39,19 +39,30 @@ public class Account {
         this.balance = balance;
     }
 
-    public void withdraw(double withdrawAmount) { 
+    public String balToString() { 
+        String s = "$" + getBalance();
+        String spaces = "";
+        for (int i = 0; i < 12 - (s.length() / 2); i++) { 
+            spaces += " ";
+        }
+        return spaces + s;
+    }
+
+    public boolean withdraw(double withdrawAmount) { 
         if (balance >= withdrawAmount) { 
             balance -= withdrawAmount;
+            return true;
         } else { 
-            System.out.println("Insufficent Funds");
+            return false;
         }
     }
 
-    public void deposit(double depositAmount) { 
+    public boolean deposit(double depositAmount) { 
         if (depositAmount > 0) { 
             balance += depositAmount;
+            return true;
         } else { 
-            System.out.println("Invalid deposit amount");
+            return false;
         }
     }
     @Override

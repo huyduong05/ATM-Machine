@@ -96,7 +96,7 @@ public class LoginScreen extends JFrame {
 
         panel.setBackground(new java.awt.Color(255, 255, 255));
 
-        password.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        password.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
 
         welcomeText.setFont(new java.awt.Font("Monospaced", 1, 30)); // NOI18N
         welcomeText.setForeground(new java.awt.Color(0, 51, 204));
@@ -112,7 +112,7 @@ public class LoginScreen extends JFrame {
             }
         });
 
-        accountNumber.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        accountNumber.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
 
         accountNumberLabel.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         accountNumberLabel.setText("Account Number:");
