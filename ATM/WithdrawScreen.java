@@ -195,6 +195,7 @@ public class WithdrawScreen extends JFrame {
         $label.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         $label.setForeground(new java.awt.Color(255, 255, 255));
         $label.setText("$$$");
+        $label.setVisible(false);
 
         GroupLayout $$$9Layout = new GroupLayout($$$);
         $$$.setLayout($$$9Layout);
@@ -258,16 +259,17 @@ public class WithdrawScreen extends JFrame {
         // TODO add your handling code here:
         try {
             double amount = Double.parseDouble(withdrawAmount.getText());
-            boolean valid = bankAccount.deposit(amount);
+            boolean valid = bankAccount.withdraw(amount);
 
             if (valid) { 
                 message.setForeground(new java.awt.Color(102, 102, 102));
                 message.setText("Withdrawing cash...");
+                $label.setVisible(true);
 
             } else { 
                 message.setForeground(new java.awt.Color(102, 102, 102));
                 message.setText("Error: Invalid amount");
-    
+                $label.setVisible(false);
             }
         } catch (Exception e) {
             message.setForeground(new java.awt.Color(102, 102, 102));

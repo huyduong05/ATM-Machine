@@ -16,7 +16,6 @@ public class Account {
     }
     
     public String getAccountNumber() {
-        System.out.println(accountNumber);
         return accountNumber;
     }
     
@@ -52,15 +51,18 @@ public class Account {
     public boolean withdraw(double withdrawAmount) { 
         if (balance >= withdrawAmount) { 
             balance -= withdrawAmount;
+            System.out.println(balance);
             return true;
         } else { 
             return false;
         }
+        
     }
 
     public boolean deposit(double depositAmount) { 
         if (depositAmount > 0) { 
             balance += depositAmount;
+            System.out.println(balance);
             return true;
         } else { 
             return false;
@@ -68,7 +70,6 @@ public class Account {
     }
     @Override
     public String toString() {
-        // TODO Auto-generated method stub
         return accountNumber + " " + pinNumber + " " + balance;
     }
 
