@@ -187,7 +187,7 @@ public class FastCashScreen extends JFrame {
         });
 
         message.setFont(new java.awt.Font("SansSerif", 2, 13)); // NOI18N
-        message.setForeground(new java.awt.Color(102, 102, 102));
+        message.setForeground(new java.awt.Color(255, 255, 255));
         message.setText("Withdrawing cash...");
 
         GroupLayout screen7Layout = new GroupLayout(screen7);
@@ -259,6 +259,7 @@ public class FastCashScreen extends JFrame {
         $label.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         $label.setForeground(new java.awt.Color(255, 255, 255));
         $label.setText("$$$");
+        $label.setVisible(false);
 
         GroupLayout $$$1Layout = new GroupLayout($$$1);
         $$$1.setLayout($$$1Layout);
@@ -330,26 +331,110 @@ public class FastCashScreen extends JFrame {
 
     private void twentyButtonActionPerformed(java.awt.event.ActionEvent evt) {                                             
         // TODO add your handling code here:
+        double amount = 20.00;
+        boolean valid = bankAccount.withdraw(amount);
+
+        if (valid) { 
+            message.setForeground(new java.awt.Color(102, 102, 102));
+            message.setText("Withdrawing cash...");
+            $label.setVisible(true);
+
+        } else { 
+            message.setForeground(new java.awt.Color(102, 102, 102));
+            message.setText("Insufficient funds");
+            $label.setVisible(false);
+        }
     }                                            
 
     private void fortyButtonActionPerformed(java.awt.event.ActionEvent evt) {                                            
         // TODO add your handling code here:
+        double amount = 40.00;
+        boolean valid = bankAccount.withdraw(amount);
+
+        if (valid) { 
+            message.setForeground(new java.awt.Color(102, 102, 102));
+            message.setText("Withdrawing cash...");
+            $label.setVisible(true);
+
+        } else { 
+            message.setForeground(new java.awt.Color(102, 102, 102));
+            message.setText("Insufficient funds");
+            $label.setVisible(false);
+        }
+
+    }     
+
+    private void sixtyButtonActionPerformed(java.awt.event.ActionEvent evt) {                                            
+        // TODO add your handling code here:
+        double amount = 60.00;
+        boolean valid = bankAccount.withdraw(amount);
+
+        if (valid) { 
+            message.setForeground(new java.awt.Color(102, 102, 102));
+            message.setText("Withdrawing cash...");
+            $label.setVisible(true);
+
+        } else { 
+            message.setForeground(new java.awt.Color(102, 102, 102));
+            message.setText("Insufficient funds");
+            $label.setVisible(false);
+        }
+    
     }                                           
 
     private void eightyButtonActionPerformed(java.awt.event.ActionEvent evt) {                                             
         // TODO add your handling code here:
-    }                                            
+        double amount = 80.00;
+        boolean valid = bankAccount.withdraw(amount);
 
-    private void sixtyButtonActionPerformed(java.awt.event.ActionEvent evt) {                                            
-        // TODO add your handling code here:
-    }                                           
+        if (valid) { 
+            message.setForeground(new java.awt.Color(102, 102, 102));
+            message.setText("Withdrawing cash...");
+            $label.setVisible(true);
+
+        } else { 
+            message.setForeground(new java.awt.Color(102, 102, 102));
+            message.setText("Insufficient funds");
+            $label.setVisible(false);
+        }
+
+    }                                            
 
     private void hundredButtonActionPerformed(java.awt.event.ActionEvent evt) {                                              
         // TODO add your handling code here:
+        double amount = 100.00;
+        boolean valid = bankAccount.withdraw(amount);
+
+        if (valid) { 
+            message.setForeground(new java.awt.Color(102, 102, 102));
+            message.setText("Withdrawing cash...");
+            $label.setVisible(true);
+
+        } else { 
+            message.setForeground(new java.awt.Color(102, 102, 102));
+            message.setText("Insufficient funds");
+            $label.setVisible(false);
+        }
+    
     }                                             
 
     private void twohundredButtonActionPerformed(java.awt.event.ActionEvent evt) {                                                 
         // TODO add your handling code here:
+        double amount = 200.00;
+        boolean valid = bankAccount.withdraw(amount);
+
+        if (valid) { 
+            message.setForeground(new java.awt.Color(102, 102, 102));
+            message.setText("Withdrawing cash...");
+            $label.setVisible(true);
+
+        } else { 
+            message.setForeground(new java.awt.Color(102, 102, 102));
+            message.setText("Insufficient funds");
+
+            $label.setVisible(false);
+        }
+    
     }                                                
 
     /**
