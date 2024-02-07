@@ -117,7 +117,7 @@ public class HomeScreen extends JFrame {
 
         accountNumber.setFont(new java.awt.Font("SansSerif", 2, 13)); // NOI18N
         accountNumber.setForeground(new java.awt.Color(102, 102, 102));
-        accountNumber.setText("Account Number: xxxxxxxxxxxx");
+        accountNumber.setText("Account Number: " + bankAccount.getAccountNumber());
 
         signoutButton.setBackground(new java.awt.Color(255, 96, 96));
         signoutButton.setFont(new java.awt.Font(".AppleSystemUIFont", 1, 18)); // NOI18N

@@ -16,6 +16,7 @@ public class Account {
     }
     
     public String getAccountNumber() {
+        System.out.println(accountNumber);
         return accountNumber;
     }
     
@@ -68,7 +69,7 @@ public class Account {
     @Override
     public String toString() {
         // TODO Auto-generated method stub
-        return accountNumber;
+        return accountNumber + " " + pinNumber + " " + balance;
     }
 
     

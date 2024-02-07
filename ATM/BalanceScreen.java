@@ -85,7 +85,7 @@ public class BalanceScreen extends JFrame {
 
         accountNumber.setFont(new java.awt.Font("SansSerif", 2, 13)); // NOI18N
         accountNumber.setForeground(new java.awt.Color(102, 102, 102));
-        accountNumber.setText("Account Number: xxxxxxxxxxxx");
+        accountNumber.setText("Account Number: " + bankAccount.getAccountNumber());
 
         balancePanel.setBackground(new java.awt.Color(0, 153, 102));
         balancePanel.setBorder(new javax.swing.border.MatteBorder(null));

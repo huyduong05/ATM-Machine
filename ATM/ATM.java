@@ -29,7 +29,7 @@ public class ATM {
     }
 
     public void addAccount(String accountNumber, String pinNumber, double balance) { 
-        accounts.putIfAbsent(accountNumber, new Account(pinNumber, pinNumber, balance));
+        accounts.putIfAbsent(accountNumber, new Account(accountNumber, pinNumber, balance));
         // System.out.println(accounts.size());
     }
 

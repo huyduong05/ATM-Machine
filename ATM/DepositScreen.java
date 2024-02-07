@@ -20,7 +20,7 @@ public class DepositScreen extends JFrame {
     private JPanel panel;
     private java.awt.Button signoutButton;
     private JLabel welcomeText;
-    private JTextField withdrawAmount;
+    private JTextField depositAmount;
 
     /**
      * Creates new form DepositScreen
@@ -46,7 +46,7 @@ public class DepositScreen extends JFrame {
         welcomeText = new JLabel();
         accountNumber = new JLabel();
         depositText = new JLabel();
-        withdrawAmount = new JTextField();
+        depositAmount = new JTextField();
         depositButton = new java.awt.Button();
         homeButton = new java.awt.Button();
         signoutButton = new java.awt.Button();
@@ -87,12 +87,12 @@ public class DepositScreen extends JFrame {
 
         accountNumber.setFont(new java.awt.Font("SansSerif", 2, 13)); // NOI18N
         accountNumber.setForeground(new java.awt.Color(102, 102, 102));
-        accountNumber.setText("Account Number: xxxxxxxxxxxx");
+        accountNumber.setText("Account Number: " + bankAccount.getAccountNumber());
 
         depositText.setFont(new java.awt.Font(".AppleSystemUIFont", 0, 16)); // NOI18N
         depositText.setText("Enter the amount you are depositing:");
 
-        withdrawAmount.setFont(new java.awt.Font(".AppleSystemUIFont", 0, 14)); // NOI18N
+        depositAmount.setFont(new java.awt.Font(".AppleSystemUIFont", 0, 14)); // NOI18N
 
         depositButton.setBackground(new java.awt.Color(0, 153, 51));
         depositButton.setFont(new java.awt.Font(".AppleSystemUIFont", 1, 22)); // NOI18N
@@ -125,7 +125,7 @@ public class DepositScreen extends JFrame {
         });
 
         message.setFont(new java.awt.Font("SansSerif", 2, 13)); // NOI18N
-        message.setForeground(new java.awt.Color(102, 102, 102));
+        message.setForeground(new java.awt.Color(255, 255, 255));
         message.setText("Depositing cash...");
 
         GroupLayout panelLayout = new GroupLayout(panel);
@@ -147,7 +147,7 @@ public class DepositScreen extends JFrame {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(panelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
                     .addGroup(GroupLayout.Alignment.TRAILING, panelLayout.createSequentialGroup()
-                        .addComponent(withdrawAmount, GroupLayout.PREFERRED_SIZE, 180, GroupLayout.PREFERRED_SIZE)
+                        .addComponent(depositAmount, GroupLayout.PREFERRED_SIZE, 180, GroupLayout.PREFERRED_SIZE)
                         .addGap(171, 171, 171))
                     .addGroup(GroupLayout.Alignment.TRAILING, panelLayout.createSequentialGroup()
                         .addComponent(message)
@@ -174,7 +174,7 @@ public class DepositScreen extends JFrame {
                 .addGap(28, 28, 28)
                 .addComponent(depositText)
                 .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(withdrawAmount, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                .addComponent(depositAmount, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                 .addGap(16, 16, 16)
                 .addComponent(depositButton, GroupLayout.PREFERRED_SIZE, 50, GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
@@ -235,6 +235,25 @@ public class DepositScreen extends JFrame {
 
     private void depositButtonActionPerformed(java.awt.event.ActionEvent evt) {                                              
         // TODO add your handling code here:
+        try {
+            double amount = Double.parseDouble(depositAmount.getText());
+            boolean valid = bankAccount.deposit(amount);
+
+            if (valid) { 
+                message.setForeground(new java.awt.Color(102, 102, 102));
+                message.setText("Depositing cash...");
+
+            } else { 
+                message.setForeground(new java.awt.Color(102, 102, 102));
+                message.setText("Error: Invalid amount");
+    
+            }
+        } catch (Exception e) {
+            message.setForeground(new java.awt.Color(102, 102, 102));
+            message.setText("Error: Invalid amount");
+        }
+        
+
     }                                             
 
     /**

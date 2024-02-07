@@ -13,7 +13,7 @@ public class FastCashScreen extends JFrame {
     private JLabel $label;
     private JLabel ATMLabel3;
     private JPanel ATMLogo3;
-    private JLabel accountText;
+    private JLabel accountNumber;
     private JButton eightyButton;
     private JLabel fastcashText;
     private JButton fortyButton;
@@ -50,7 +50,7 @@ public class FastCashScreen extends JFrame {
         ATMLabel3 = new JLabel();
         screen7 = new JPanel();
         welcomeText = new JLabel();
-        accountText = new JLabel();
+        accountNumber = new JLabel();
         signoutButton = new java.awt.Button();
         homeButton = new java.awt.Button();
         fastcashText = new JLabel();
@@ -97,9 +97,9 @@ public class FastCashScreen extends JFrame {
         welcomeText.setForeground(new java.awt.Color(0, 51, 204));
         welcomeText.setText("THE BANK");
 
-        accountText.setFont(new java.awt.Font("SansSerif", 2, 13)); // NOI18N
-        accountText.setForeground(new java.awt.Color(102, 102, 102));
-        accountText.setText("Account Number: xxxxxxxxxxxx");
+        accountNumber.setFont(new java.awt.Font("SansSerif", 2, 13)); // NOI18N
+        accountNumber.setForeground(new java.awt.Color(102, 102, 102));
+        accountNumber.setText("Account Number: " + bankAccount.getAccountNumber());
 
         signoutButton.setBackground(new java.awt.Color(255, 96, 96));
         signoutButton.setFont(new java.awt.Font(".AppleSystemUIFont", 1, 18)); // NOI18N
@@ -201,7 +201,7 @@ public class FastCashScreen extends JFrame {
                         .addComponent(welcomeText))
                     .addGroup(screen7Layout.createSequentialGroup()
                         .addGap(155, 155, 155)
-                        .addComponent(accountText))
+                        .addComponent(accountNumber))
                     .addGroup(screen7Layout.createSequentialGroup()
                         .addGap(197, 197, 197)
                         .addComponent(fastcashText))
@@ -230,7 +230,7 @@ public class FastCashScreen extends JFrame {
                 .addGap(20, 20, 20)
                 .addComponent(welcomeText)
                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(accountText)
+                .addComponent(accountNumber)
                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(fastcashText)
                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)

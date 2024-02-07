@@ -68,7 +68,7 @@ public class WithdrawScreen extends JFrame {
 
         accountNumber.setFont(new java.awt.Font("SansSerif", 2, 13)); // NOI18N
         accountNumber.setForeground(new java.awt.Color(102, 102, 102));
-        accountNumber.setText("Account Number: xxxxxxxxxxxx");
+        accountNumber.setText("Account Number: " + bankAccount.getAccountNumber());
 
         depositText.setFont(new java.awt.Font(".AppleSystemUIFont", 0, 16)); // NOI18N
         depositText.setText("Enter an amount to withdraw:");
@@ -106,7 +106,7 @@ public class WithdrawScreen extends JFrame {
         });
 
         message.setFont(new java.awt.Font("SansSerif", 2, 13)); // NOI18N
-        message.setForeground(new java.awt.Color(102, 102, 102));
+        message.setForeground(new java.awt.Color(255, 255, 255));
         message.setText("Withdrawing cash...");
 
         GroupLayout panelLayout = new GroupLayout(panel);
@@ -256,6 +256,24 @@ public class WithdrawScreen extends JFrame {
 
     private void withdrawButtonActionPerformed(java.awt.event.ActionEvent evt) {                                               
         // TODO add your handling code here:
+        try {
+            double amount = Double.parseDouble(withdrawAmount.getText());
+            boolean valid = bankAccount.deposit(amount);
+
+            if (valid) { 
+                message.setForeground(new java.awt.Color(102, 102, 102));
+                message.setText("Withdrawing cash...");
+
+            } else { 
+                message.setForeground(new java.awt.Color(102, 102, 102));
+                message.setText("Error: Invalid amount");
+    
+            }
+        } catch (Exception e) {
+            message.setForeground(new java.awt.Color(102, 102, 102));
+            message.setText("Error: Invalid amount");
+        }
+
     }                                              
 
     private void homeButtonActionPerformed(java.awt.event.ActionEvent evt) {                                           
